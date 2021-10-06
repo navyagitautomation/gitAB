@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="10" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="URL" value="google.com"/>
+  <parameter name="username" value="12345"/>
+  <listeners>
+    <listener class-name="test.Listeners"/>
+  </listeners>
+  <test thread-count="10" parallel="tests" name="Test(failed)">
+    <classes>
+      <class name="test.test2">
+        <methods>
+          <include name="loanholder2"/>
+        </methods>
+      </class> <!-- test.test2 -->
+      <class name="test.test1">
+        <methods>
+          <include name="beforetest"/>
+          <include name="cardholder3"/>
+        </methods>
+      </class> <!-- test.test1 -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
